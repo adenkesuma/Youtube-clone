@@ -17,7 +17,7 @@ import MusicNoteIcon from "@mui/icons-material/MusicNote";
 import { Icon, Stack } from '@mui/material'
 import { categories } from '../utils/constants'
 
-export default function Sidebar() {
+export default function Sidebar({ selectedCategory, setSelectedCategory }) {
     const getCategoryIcon = (iconName) => {
         switch (iconName) {
             case 'HomeIcon':
@@ -51,8 +51,6 @@ export default function Sidebar() {
         }
     }
 
-    const selectedCategory = 'New';
-
     return (
         <Stack
             direction='row'
@@ -60,6 +58,7 @@ export default function Sidebar() {
         >
             {categories.map((category) => (
                 <button 
+                    onClick={() => setSelectedCategory(category.name)}
                     key={category.name} 
                     className='category-btn'
                     style={{ background: category.name === selectedCategory && '#FC1503', color: '#fff'}}
