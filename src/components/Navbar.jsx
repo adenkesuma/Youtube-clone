@@ -1,9 +1,8 @@
 import { Stack } from '@mui/material'
 import { Link } from 'react-router-dom'
-// import { logo } from '../utils/constants'
-import logo from '../assets/logo.png'
+import { logo } from '../utils/constants'
+// import logo from '../assets/logo.png'
 import SearchBar from './SearchBar';
-
 
 export default function Navbar() {
     return (
