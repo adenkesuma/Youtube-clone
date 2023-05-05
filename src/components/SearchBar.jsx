@@ -1,7 +1,7 @@
 import { Search} from '@mui/icons-material'
 import { Paper, IconButton } from '@mui/material'
-import { useState } from 'react'
-import { useNavigate } from 'react-router'
+// import { useState } from 'react'
+// import { useNavigate } from 'react-router'
 
 export default function SearchBar() {
   return (
@@ -12,8 +12,7 @@ export default function SearchBar() {
             borderRadius: 20,
             border: '1px solid #e3e3e3',
             pl: 2,
-            boxShadow: 'nonee',
-            mr: { sm: 5}
+            boxShadow: 'none',
         }}
     >
         <input 
