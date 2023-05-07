@@ -2,7 +2,7 @@ export const logo = 'https://i.ibb.co/s9Qys2j/logo.png'
 
 export const categories = [
     { name: 'New', icon: 'HomeIcon' },
-    { name: 'Aden Tried Coding', icon: 'CodeIcon' },
+    { name: 'Josh tried coding', icon: 'CodeIcon' },
     { name: 'Coding', icon: 'CodeIcon' },
     { name: 'ReactJS', icon: 'CodeIcon'  },
     { name: 'NextJS', icon: 'CodeIcon'  },
