@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom'
 import { Typography, Card, CardContent, CardMedia } from '@mui/material'
 import { CheckCircle } from '@mui/icons-material'
+import PropTypes from 'prop-types'
 
-import { demoThumnailUrl, demoVideoUrl, demoVideoTitle, demoChannelUrl, demoChannelTitle } from '../utils/constants'
+import { demoVideoUrl, demoVideoTitle, demoChannelUrl, demoChannelTitle } from '../utils/constants'
 
 export default function VideoCard({
   video: {
@@ -36,4 +37,22 @@ export default function VideoCard({
       </CardContent>
     </Card>
   );
+}
+
+VideoCard.propTypes = {
+    video: PropTypes.shape({
+        id: PropTypes.shape({
+            videoId: PropTypes.string.isRequired
+        }).isRequired,
+        snippet: PropTypes.shape({
+            channelId: PropTypes.string.isRequired,
+            title: PropTypes.string.isRequired,
+            channelTitle: PropTypes.string.isRequired,
+            thumbnails: PropTypes.shape({
+                high: PropTypes.shape({
+                    url: PropTypes.string.isRequired
+                }).isRequired
+            }).isRequired
+        })
+    })
 }

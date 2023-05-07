@@ -1,5 +1,6 @@
 import { Stack, Box } from '@mui/material'
 import { ChannelCard, VideoCard } from './'
+import PropTypes from 'prop-types'
 
 export default function Videos({ videos }) {
   console.log(videos)
@@ -19,4 +20,8 @@ export default function Videos({ videos }) {
       ))}
     </Stack>
   )
+}
+
+Videos.propTypes = {
+  videos: PropTypes.arrayOf(PropTypes.any).isRequired
 }

@@ -1,6 +1,7 @@
 import { Box, CardContent, CardMedia, Typography } from '@mui/material'
-import { Link } from '@mui/material';
-import { CheckCircle } from '@mui/icons-material';
+import { Link } from '@mui/material'
+import { CheckCircle } from '@mui/icons-material'
+import PropTypes from 'prop-types'
 
 export default function ChannelCard({ channelDetail }) {
     return (
@@ -48,7 +49,7 @@ export default function ChannelCard({ channelDetail }) {
 
             {channelDetail?.statistics?.subscriberCount && (
                 <Typography>
-                    {parseInt(channelDetail?.statistics?.subcriberCount).toLocaleString()} Subscribers
+                    {parseInt(channelDetail?.statistics?.subscriberCount).toLocaleString()} Subscribers
                 </Typography>
             )}
           </CardContent>
@@ -56,3 +57,22 @@ export default function ChannelCard({ channelDetail }) {
       </Box>
     );
 }
+
+ChannelCard.propTypes = {
+    channelDetail: PropTypes.shape({
+        id: PropTypes.shape({
+            channelId: PropTypes.string.isRequired,
+        }).isRequired,
+        snippet: PropTypes.shape({
+            title: PropTypes.string.isRequired,
+            thumbnails: PropTypes.shape({
+                high: PropTypes.shape({
+                    url: PropTypes.string.isRequired
+                }).isRequired
+            }).isRequired
+        }).isRequired,
+        statistics: PropTypes.shape({
+            subscriberCount: PropTypes.string.isRequired
+        }).isRequired
+    }).isRequired
+};

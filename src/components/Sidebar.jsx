@@ -1,5 +1,6 @@
 import { Icon, Stack } from '@mui/material'
 import { categories } from '../utils/constants'
+import PropTypes from 'prop-types'
 
 export default function Sidebar({ selectedCategory, setSelectedCategory }) {
     return (
@@ -20,4 +21,9 @@ export default function Sidebar({ selectedCategory, setSelectedCategory }) {
             ))}
         </Stack>
     )
+}
+
+Sidebar.propTypes = {
+    selectedCategory: PropTypes.string.isRequired,
+    setSelectedCategory: PropTypes.string.isRequired
 }
