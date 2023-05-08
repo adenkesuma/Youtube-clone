@@ -25,5 +25,5 @@ export default function Sidebar({ selectedCategory, setSelectedCategory }) {
 
 Sidebar.propTypes = {
     selectedCategory: PropTypes.string.isRequired,
-    setSelectedCategory: PropTypes.string.isRequired
+    setSelectedCategory: PropTypes.func.isRequired
 }

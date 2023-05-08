@@ -1,9 +1,9 @@
 import { Box, CardContent, CardMedia, Typography } from '@mui/material'
-import { Link } from '@mui/material'
+import { Link } from 'react-router-dom'
 import { CheckCircle } from '@mui/icons-material'
 import PropTypes from 'prop-types'
 
-export default function ChannelCard({ channelDetail }) {
+export default function ChannelCard({ channelDetail, marginTop }) {
     return (
       <Box 
         sx={{ 
@@ -12,6 +12,7 @@ export default function ChannelCard({ channelDetail }) {
             width: { xs: '356px', md:'320px' },
             height: { xs: '300px', md: '285px' },
             margin: 'auto',
+            marginTop,
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center'
@@ -72,7 +73,8 @@ ChannelCard.propTypes = {
             }).isRequired
         }).isRequired,
         statistics: PropTypes.shape({
-            subscriberCount: PropTypes.string.isRequired
-        }).isRequired
-    }).isRequired
+            subscriberCount: PropTypes.string
+        })
+    }).isRequired,
+    marginTop: PropTypes.string
 };

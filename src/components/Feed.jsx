@@ -9,7 +9,7 @@ export default function Feed() {
     const [videos, setVideos] = useState([])
 
     useEffect(() => {
-        fetchFromAPI(`search?part=snipper&q=${selectedCategory}`)
+        fetchFromAPI(`search?part=snippet&q=${selectedCategory}`)
         .then((data) => {
             setVideos(data.items)
         })

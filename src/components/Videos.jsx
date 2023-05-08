@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 
 export default function Videos({ videos }) {
   console.log(videos)
-
   return (
     <Stack
       direction='row'
