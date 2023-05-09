@@ -18,7 +18,7 @@ export const categories = [
     { name: 'New', icon: <HomeIcon /> },
     { name: 'Josh tried coding', icon: <CodeIcon /> },
     { name: 'Coding', icon: <CodeIcon /> },
-    { name: 'ReactJS', icon: <CodeIcon />  },
+    { name: 'Svelte', icon: <CodeIcon />  },
     { name: 'NextJS', icon: <CodeIcon />  },
     { name: 'Music', icon: <MusicNoteIcon /> },
     { name: 'Education', icon: <SchoolIcon />  },
