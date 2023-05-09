@@ -2,10 +2,12 @@ import { Stack, Box } from '@mui/material'
 import { ChannelCard, VideoCard } from './'
 import PropTypes from 'prop-types'
 
-export default function Videos({ videos }) {
+export default function Videos({ videos, direction }) {
+  if (!videos?.length) return 'Loading...'
+
   return (
     <Stack
-      direction='row'
+      direction={direction || 'row'}
       flexWrap='wrap'
       justifyContent='start'
       gap={2}
@@ -21,5 +23,6 @@ export default function Videos({ videos }) {
 }
 
 Videos.propTypes = {
-  videos: PropTypes.arrayOf(PropTypes.any).isRequired
+  videos: PropTypes.arrayOf(PropTypes.any).isRequired,
+  direction: PropTypes.string
 }

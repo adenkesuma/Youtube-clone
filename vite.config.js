@@ -8,6 +8,9 @@ export default defineConfig({
       '@': '/src',
     },
   },
+  build: {
+    outDir: 'dist'
+  }
 })   
 
 
