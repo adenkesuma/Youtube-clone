@@ -1,6 +1,9 @@
+// import package
 import { Stack, Box } from '@mui/material'
-import { ChannelCard, VideoCard } from './'
 import PropTypes from 'prop-types'
+
+// import component
+import { ChannelCard, VideoCard } from './'
 
 export default function Videos({ videos, direction }) {
   if (!videos?.length) return 'Loading...'
