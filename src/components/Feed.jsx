@@ -1,7 +1,10 @@
+// import package
 import { Box, Stack, Typography } from '@mui/material'
+import { useEffect, useState } from 'react';
+
+// import component
 import { Videos, Sidebar } from './'
 import { fetchFromAPI } from '../utils/fetchFromAPI'
-import { useEffect, useState } from 'react';
 
 export default function Feed() {
     const [selectedCategory, setSelectedCategory] = useState('New')
@@ -15,28 +18,23 @@ export default function Feed() {
     }, [selectedCategory])
 
     return (
-      <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
+      <Stack sx={{ flexDirection: { sx: 'column', md: 'row' } }}>
         {/* sidebar */}
         <Box
           sx={{
-            height: { sx: "auto", md: "92vh" },
-            borderRight: "1px solid #3d3d3d",
+            height: { sx: 'auto', md: '92vh' },
+            borderRight: '1px solid #3d3d3d',
             px: { sx: 0, md: 2 },
           }}
         >
-          <Sidebar
-            selectedCategory={selectedCategory}
-            setSelectedCategory={setSelectedCategory}
-          />
-
-          {/* copyright */}
+          <Sidebar selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
           <Typography
-            className="copyright"
-            variant="body2"
+            className='copyright'
+            variant='body2'
             sx={{
               mt: 1.5,
-              color: "#fff",
-              display: { xs: "none", md: "block" },
+              color: '#fff',
+              display: { xs: 'none', md: 'block' },
             }}
           >
             Copyright 2023 Aden Tried Coding
@@ -44,19 +42,18 @@ export default function Feed() {
         </Box>
 
         {/* content */}
-        <Box p={2} sx={{ overflowY: "auto", height: "90vh", flex: 2 }}>
+        <Box p={2} sx={{ overflowY: 'auto', height: '90vh', flex: 2 }}>
           <Typography
-            variant="h4"
-            fontWeight="bold"
+            variant='h4'
+            fontWeight='bold'
             mb={2}
-            sx={{ color: "white" }}
+            sx={{ color: 'white' }}
           >
             {selectedCategory}
-            <span style={{ color: "#FBD46D" }}> videos</span>
+            <span style={{ color: '#FBD46D' }}> videos</span>
           </Typography>
-
           <Videos videos={videos} />
         </Box>
       </Stack>
-    );
+    )
 }

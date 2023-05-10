@@ -1,3 +1,4 @@
+// import package
 import { Box, CardContent, CardMedia, Typography } from '@mui/material'
 import { Link } from 'react-router-dom'
 import { CheckCircle } from '@mui/icons-material'
@@ -7,7 +8,7 @@ export default function ChannelCard({ channelDetail, marginTop }) {
     return (
       <Box 
         sx={{ 
-            boxShadow: "none", 
+            boxShadow: 'none', 
             borderRadius: 0 ,
             width: { xs: '356px', md:'320px' },
             height: { xs: '300px', md: '285px' },
@@ -18,33 +19,33 @@ export default function ChannelCard({ channelDetail, marginTop }) {
             alignItems: 'center'
         }}>
         <Link
-          to={`/channel/${channelDetail?.id?.channelId}`}
-          sx={{ textDecoration: "none" }}
+          to={`/feed/channel/${channelDetail?.id?.channelId}`}
+          sx={{ textDecoration: 'none' }}
         >
           <CardContent
             sx={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-              color: "#fff",
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+              color: '#fff',
             }}
           >
             <CardMedia
               image={`${channelDetail?.snippet?.thumbnails?.high?.url}`}
               alt={`${channelDetail?.snippet?.title}`}
               sx={{
-                borderRadius: "50%",
-                width: "180px",
-                height: "180px",
+                borderRadius: '50%',
+                width: '180px',
+                height: '180px',
                 mb: 2,
-                border: "1px solid #e3e3e3",
+                border: '1px solid #e3e3e3',
               }}
             />
-            <Typography variant="h6">
+            <Typography variant='h6'>
               {channelDetail?.snippet?.title}
               <CheckCircle
-                sx={{ fontSize: 14, color: "gray", ml: "5px", mb: "-2px" }}
+                sx={{ fontSize: 14, color: 'gray', ml: '5px', mb: '-2px' }}
               />
             </Typography>
 

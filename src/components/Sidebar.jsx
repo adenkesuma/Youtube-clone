@@ -1,6 +1,9 @@
+// import package
 import { Icon, Stack } from '@mui/material'
-import { categories } from '../utils/constants'
 import PropTypes from 'prop-types'
+
+// import component
+import { categories } from '../utils/constants'
 
 export default function Sidebar({ selectedCategory, setSelectedCategory }) {
     return (

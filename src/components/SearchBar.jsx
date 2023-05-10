@@ -1,3 +1,4 @@
+// import package
 import { Search } from '@mui/icons-material'
 import { Paper, IconButton } from '@mui/material'
 import { useState } from 'react'
@@ -38,7 +39,7 @@ export default function SearchBar() {
 
       <IconButton
         type='submit'
-        sx={{ p: '10px', color: '#000000' }}
+        sx={{ p: '8px', color: '#000000' }}
       >
         <Search />
       </IconButton>

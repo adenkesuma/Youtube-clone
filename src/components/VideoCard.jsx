@@ -1,8 +1,10 @@
+// import package
 import { Link } from 'react-router-dom'
 import { Typography, Card, CardContent, CardMedia } from '@mui/material'
 import { CheckCircle } from '@mui/icons-material'
 import PropTypes from 'prop-types'
 
+// import component
 import { demoVideoUrl, demoVideoTitle, demoChannelUrl, demoChannelTitle } from '../utils/constants'
 
 export default function VideoCard({
@@ -10,8 +12,7 @@ export default function VideoCard({
     id: { videoId },
     snippet,
   },
-}) {
-
+    }) {
   return (
     <Card
       sx={{
@@ -42,7 +43,7 @@ export default function VideoCard({
         </Link>
         <Link
           to={
-            snippet?.channelId ? `/video/${snippet?.channelId}` : demoChannelUrl
+            snippet?.channelId ? `/feed/video/${snippet?.channelId}` : demoChannelUrl
           }
         >
           <Typography variant="subtitle2" fontWeight="bold" color="gray">

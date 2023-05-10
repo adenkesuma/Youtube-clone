@@ -3,8 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Box } from '@mui/material'
 
 // import components
-import { Navbar, Feed, VideoDetail, ChannelDetail, SearchFeed } from './components'
-import LandingPage from './components/LandingPage';
+import { Navbar, Feed, VideoDetail, ChannelDetail, SearchFeed, LandingPage } from './components'
 
 function App() {
   return (

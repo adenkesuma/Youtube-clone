@@ -1,8 +1,11 @@
-import { Box, Typography } from "@mui/material";
-import { Videos } from "./";
-import { useParams } from "react-router";
-import { fetchFromAPI } from "../utils/fetchFromAPI";
-import { useEffect, useState } from "react";
+// import package
+import { Box, Typography } from '@mui/material'
+import { useParams } from 'react-router'
+import { useEffect, useState } from 'react'
+
+// import component
+import { fetchFromAPI } from '../utils/fetchFromAPI'
+import { Videos } from './'
 
 export default function SearchFeed() {
   const [videos, setVideos] = useState([])
@@ -15,10 +18,10 @@ export default function SearchFeed() {
   }, [searchTerm]);
 
   return (
-    <Box p={2} sx={{ overflowY: "auto", height: "90vh", flex: 2 }}>
-      <Typography variant="h4" fontWeight="bold" mb={2} sx={{ color: "white" }}>
+    <Box p={2} sx={{ overflowY: 'auto', height: '90vh', flex: 2 }}>
+      <Typography variant='h4' fontWeight='bold' mb={2} sx={{ color: '#ffffff' }}>
         Search Result for:
-        <span style={{ color: "#FBD46D" }}> {searchTerm}</span> videos
+        <span style={{ color: '#FBD46D' }}> {searchTerm}</span> videos
       </Typography>
 
       <Videos videos={videos} />
