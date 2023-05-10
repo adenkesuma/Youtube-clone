@@ -11,7 +11,7 @@ export default function SearchBar() {
         e.preventDefault()
 
         if (searchTerm) {
-            navigate(`/search/${searchTerm}`)
+            navigate(`/feed/search/${searchTerm}`)
 
             setSearchTerm('')
         }

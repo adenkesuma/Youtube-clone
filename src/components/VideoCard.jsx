@@ -13,25 +13,43 @@ export default function VideoCard({
 }) {
 
   return (
-    <Card sx={{ width: { xs: '90vw', sm: '358px', md: '320px' }, boxShadow: 'none', borderRadius: 0 }}>
-      <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
+    <Card
+      sx={{
+        background: "rgba(255, 255, 255, 0.1)",
+        width: { xs: "90vw", sm: "358px", md: "320px" },
+        boxShadow: "none",
+        borderRadius: "10px",
+        backdropFilter: "blur(9.9px)",
+      }}
+    >
+      <Link to={videoId ? `/feed/video/${videoId}` : demoVideoUrl}>
         <CardMedia
           image={snippet?.thumbnails?.high?.url}
           alt={snippet?.title}
-          sx={{ width: { xs: '100%', sm: '358px', md: '320px' }, height: 180 }}
+          sx={{ width: { xs: "100%", sm: "358px", md: "320px" }, height: 180, borderRadius: '10px 10px 0 0' }}
         />
       </Link>
 
-      <CardContent sx={{ backgroundColor: "#1e1e1e", height: "106px" }}>
+      <CardContent
+        sx={{
+          height: "106px",
+        }}
+      >
         <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
           <Typography variant="subtitle1" fontWeight="bold" color="#fff">
             {snippet?.title.slice(0, 60) || demoVideoTitle.slice(0, 60)}
           </Typography>
         </Link>
-        <Link to={snippet?.channelId? `/video/${snippet?.channelId}` : demoChannelUrl}>
-          <Typography variant="subtitle2" fontWeight="bold" color='gray'>
+        <Link
+          to={
+            snippet?.channelId ? `/video/${snippet?.channelId}` : demoChannelUrl
+          }
+        >
+          <Typography variant="subtitle2" fontWeight="bold" color="gray">
             {snippet?.channelTitle || demoChannelTitle}
-            <CheckCircle sx={{ fontSize: 14, color: 'gray', ml: '5px', mb: '-2px' }} />
+            <CheckCircle
+              sx={{ fontSize: 14, color: "gray", ml: "5px", mb: "-2px" }}
+            />
           </Typography>
         </Link>
       </CardContent>
