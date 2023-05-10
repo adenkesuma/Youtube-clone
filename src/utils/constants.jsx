@@ -12,11 +12,8 @@ import FitnessCenterIcon from '@mui/icons-material/FitnessCenter'
 import DeveloperModeIcon from '@mui/icons-material/DeveloperMode'
 import MusicNoteIcon from "@mui/icons-material/MusicNote";
 
-export const logo = 'https://i.ibb.co/s9Qys2j/logo.png'
-
 export const categories = [
     { name: 'New', icon: <HomeIcon /> },
-    { name: 'Josh tried coding', icon: <CodeIcon /> },
     { name: 'Coding', icon: <CodeIcon /> },
     { name: 'Svelte', icon: <CodeIcon />  },
     { name: 'NextJS', icon: <CodeIcon />  },

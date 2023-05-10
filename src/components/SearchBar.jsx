@@ -17,30 +17,31 @@ export default function SearchBar() {
         }
     }
 
-    console.log(searchTerm)
-
   return (
     <Paper
-        component='form'
-        onSubmit={handleSubmit}
-        sx={{
-            borderRadius: 20,
-            border: '1px solid #e3e3e3',
-            pl: 2,
-            boxShadow: 'none',
-        }}
+      component='form'
+      onSubmit={handleSubmit}
+      sx={{
+        borderRadius: 20,
+        border: '1px solid #e3e3e3',
+        pl: 2,
+        boxShadow: 'none',
+      }}
     >
-        <input 
-            style={{ border: 'none', outline: 'none'}}
-            className='search-bar'
-            placeholder='search...'
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-        />
+      <input
+        style={{ border: 'none', outline: 'none' }}
+        className='search-bar'
+        placeholder='search...'
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
 
-        <IconButton type="submit" sx={{ p: '10px', color: 'red' }}>
-            <Search />
-        </IconButton>
+      <IconButton
+        type='submit'
+        sx={{ p: '10px', color: '#000000' }}
+      >
+        <Search />
+      </IconButton>
     </Paper>
-  )
+  );
 }

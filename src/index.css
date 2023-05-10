@@ -32,12 +32,12 @@ a {
 }
 
 .category-btn:hover {
-  background-color: #FC1503 !important;
-  color: white !important;
+  background-color: #FBD46D !important;
+  color: #07031A !important;
 }
 
 .category-btn:hover span{
-  color: white !important;
+  color: #07031A !important;
 }
 
 .react-player {
@@ -46,9 +46,9 @@ a {
 }
 
 .search-bar{
-  border:none;
-  outline:none;
-  width:350px;
+  border: none;
+  outline: none;
+  width: 350px;
 }
 
 .category-btn{
