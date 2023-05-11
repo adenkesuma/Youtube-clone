@@ -10,7 +10,7 @@ export default function Navbar() {
     return (
       <Container
         maxWidth="xl"
-        sx={{ position: "fixed", backgroundColor: "#07031A", left: 0, right: 0 }}
+        sx={{ position: "fixed", backgroundColor: "#07031A", left: 0, right: 0, zIndex: 9999 }}
       >
         <Stack
           justifyContent="space-between"

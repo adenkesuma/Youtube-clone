@@ -18,13 +18,13 @@ export default function Feed() {
     }, [selectedCategory])
 
     return (
-      <Container maxWidth="xl" sx={{ paddingTop: '84px' }}>
+      <Container maxWidth="xl" sx={{ paddingTop: { xs: '120px', md: '84px' }}} >
         <Stack sx={{ flexDirection: { sx: "column", md: "row" }, marginTop: 2 }}>
           {/* sidebar */}
           <Box
             sx={{
               height: { sx: "auto", md: "90vh" },
-              borderRight: "1px solid #3d3d3d",
+              borderRight: { xs: 'none', md: "1px solid #3d3d3d" },
               paddingRight: { sx: 0, md: 6 },
               paddingLeft: { sx: 0, md: 2 },
             }}

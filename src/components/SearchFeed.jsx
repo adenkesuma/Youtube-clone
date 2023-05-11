@@ -18,11 +18,17 @@ export default function SearchFeed() {
   }, [searchTerm]);
 
   return (
-    <Container maxWidth='xl' sx={{ paddingTop: '84px' }}>
-      <Box p={2} sx={{ overflowY: 'auto', height: '90vh', flex: 2 }}>
-        <Typography variant='h4' fontWeight='500' fontSize='28px' mb={4} sx={{ color: '#ffffff' }}>
+    <Container maxWidth="xl" sx={{ paddingTop: { xs: '130px', md: '84px' }}}>
+      <Box p={2} sx={{ overflowY: "auto", height: "90vh", flex: 2 }}>
+        <Typography
+          variant="h4"
+          fontWeight="500"
+          fontSize="28px"
+          mb={4}
+          sx={{ color: "#ffffff" }}
+        >
           Search Result for:
-          <span style={{ color: '#FBD46D' }}> {searchTerm}</span> videos
+          <span style={{ color: "#FBD46D" }}> {searchTerm}</span> videos
         </Typography>
 
         <Videos videos={videos} />

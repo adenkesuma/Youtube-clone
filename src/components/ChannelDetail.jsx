@@ -28,7 +28,7 @@ export default function ChannelDetail() {
   }, [id])
 
   return (
-    <Container maxWidth="xl" sx={{ paddingTop: "92px" }}>
+    <Container maxWidth="xl" sx={{ paddingTop: { xs: '140px', md: '92px' }}} >
       <Box minHeight="95vh">
         <Box mb={2} px={2}>
           <CardMedia

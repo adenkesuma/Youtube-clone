@@ -34,7 +34,7 @@ export default function VideoDetail() {
   } = videoDetail
 
   return (
-    <Container maxWidth='xl'>
+    <Container maxWidth='xl' sx={{ paddingTop: { xs: '140px', md: '84px' }}} >
       <Box minHeight='90vh'>
         <Stack direction={{ xs: 'column', md: 'row' }}>
           <Box flex={1}>
