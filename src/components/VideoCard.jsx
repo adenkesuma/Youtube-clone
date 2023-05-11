@@ -23,7 +23,7 @@ export default function VideoCard({
         backdropFilter: 'blur(9.9px)',
       }}
     >
-      <Link to={videoId ? `/feed/video/${videoId}` : demoVideoUrl}>
+      <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
         <CardMedia
           image={snippet?.thumbnails?.high?.url}
           alt={snippet?.title}
@@ -43,7 +43,7 @@ export default function VideoCard({
         </Link>
         <Link
           to={
-            snippet?.channelId ? `/feed/video/${snippet?.channelId}` : demoChannelUrl
+            snippet?.channelId ? `/video/${snippet?.channelId}` : demoChannelUrl
           }
         >
           <Typography variant='subtitle2' fontWeight='bold' color='gray'>

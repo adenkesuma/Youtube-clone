@@ -19,7 +19,7 @@ export default function ChannelCard({ channelDetail, marginTop }) {
             alignItems: 'center'
         }}>
         <Link
-          to={`/feed/channel/${channelDetail?.id?.channelId}`}
+          to={`/channel/${channelDetail?.id?.channelId}`}
           sx={{ textDecoration: 'none' }}
         >
           <CardContent

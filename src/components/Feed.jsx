@@ -1,6 +1,7 @@
 // import package
-import { Box, Stack, Typography } from '@mui/material'
+import { Box, Stack, Typography, CardMedia } from '@mui/material'
 import { useEffect, useState } from 'react';
+import BannerImage from '../assets/banner-image.jpg'
 
 // import component
 import { Videos, Sidebar } from './'
@@ -43,6 +44,7 @@ export default function Feed() {
 
         {/* content */}
         <Box p={2} sx={{ overflowY: 'auto', height: '90vh', flex: 2 }}>
+          <CardMedia component='image' image={BannerImage} alt='banner image' height='160px' width='100%' />
           <Typography
             variant='h4'
             fontWeight='bold'
