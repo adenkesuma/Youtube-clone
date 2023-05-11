@@ -1,5 +1,5 @@
 // import package
-import { Box, Typography } from '@mui/material'
+import { Box, Typography, Container } from '@mui/material'
 import { useParams } from 'react-router'
 import { useEffect, useState } from 'react'
 
@@ -18,13 +18,21 @@ export default function SearchFeed() {
   }, [searchTerm]);
 
   return (
-    <Box p={2} sx={{ overflowY: 'auto', height: '90vh', flex: 2 }}>
-      <Typography variant='h4' fontWeight='bold' mb={2} sx={{ color: '#ffffff' }}>
-        Search Result for:
-        <span style={{ color: '#FBD46D' }}> {searchTerm}</span> videos
-      </Typography>
+    <Container maxWidth='xl' sx={{ paddingTop: '84px' }}>
+      <Box p={2} sx={{ overflowY: 'auto', height: '90vh', flex: 2 }}>
+        <Typography variant='h4' fontWeight='500' fontSize='28px' mb={4} sx={{ color: '#ffffff' }}>
+          Search Result for:
+          <span style={{ color: '#FBD46D' }}> {searchTerm}</span> videos
+        </Typography>
 
-      <Videos videos={videos} />
-    </Box>
+        <Videos videos={videos} />
+      </Box>
+    </Container>
   );
 }
+
+// variant="h4"
+//               fontSize="28px"
+//               fontWeight="500"
+//               mb={2}
+//               sx={{ color: "white" }}

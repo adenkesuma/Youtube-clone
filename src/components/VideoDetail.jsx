@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import ReactPlayer from 'react-player'
-import { Typography, Box, Stack } from '@mui/material'
+import { Container, Typography, Box, Stack } from '@mui/material'
 import { CheckCircle } from '@mui/icons-material'
 
 // import component
@@ -34,38 +34,40 @@ export default function VideoDetail() {
   } = videoDetail
 
   return (
-    <Box minHeight='95vh'>
-      <Stack direction={{ xs: 'column', md: 'row' }}>
-        <Box flex={1}>
-          <Box sx={{ width: '100%', position: 'sticky', top: '86px' }}>
-            <ReactPlayer url={`https://www.youtube.com/watch?v=${id}`} className='react-player' controls />
+    <Container maxWidth='xl'>
+      <Box minHeight='90vh'>
+        <Stack direction={{ xs: 'column', md: 'row' }}>
+          <Box flex={1}>
+            <Box sx={{ width: '98%', position: 'sticky', top: '92px' }} ml={2}>
+              <ReactPlayer url={`https://www.youtube.com/watch?v=${id}`} className='react-player' controls />
 
-            <Typography color='#ffffff' variant='h5' fontWeight='bold' p={2}>
-              {title}
-            </Typography>
-            <Stack justifyContent='space-between' direction='row' sx={{ color: '#fff' }} px={2} py={1}>
-              <Link to={`/channel/${channelId}`}>
-                <Typography sx={{ color: '#fff' }}>
-                  {channelTitle}
-                  <CheckCircle sx={{ fontSize: '14px', color: 'gray', ml: '10px' }} />
-                </Typography>
-              </Link>
-              <Stack flexDirection='row' gap='20px' alignItems='center'>
-                <Typography variant='body1' sx={{ opacity: 0.7 }}>
-                  {parseInt(viewCount).toLocaleString()} views                  
-                </Typography>
-                <Typography variant='body1' sx={{ opacity: 0.7 }}>
-                  {parseInt(likeCount).toLocaleString()} likes                 
-                </Typography>
+              <Typography color='#ffffff' variant='h5' fontWeight='bold' p={2}>
+                {title}
+              </Typography>
+              <Stack justifyContent='space-between' direction='row' sx={{ color: '#fff' }} px={2} py={1}>
+                <Link to={`/channel/${channelId}`}>
+                  <Typography sx={{ color: '#fff' }}>
+                    {channelTitle}
+                    <CheckCircle sx={{ fontSize: '14px', color: 'gray', ml: '10px' }} />
+                  </Typography>
+                </Link>
+                <Stack flexDirection='row' gap='20px' alignItems='center'>
+                  <Typography variant='body1' sx={{ opacity: 0.7 }}>
+                    {parseInt(viewCount).toLocaleString()} views                  
+                  </Typography>
+                  <Typography variant='body1' sx={{ opacity: 0.7 }}>
+                    {parseInt(likeCount).toLocaleString()} likes                 
+                  </Typography>
+                </Stack>
               </Stack>
-            </Stack>
+            </Box>
           </Box>
-        </Box>
 
-        <Box px={2} py={{ md: 1, xs: 5}} justifyContent='center' alignItems='center'>
-          <Videos videos={videos} direction='column' />
-        </Box>
-      </Stack>
-    </Box>
+          <Box px={2} py={{ md: 1, xs: 5}} mt='84px' justifyContent='center' alignItems='center'>
+            <Videos videos={videos} direction='column' />
+          </Box>
+        </Stack>
+      </Box>
+    </Container>
   )
 }
